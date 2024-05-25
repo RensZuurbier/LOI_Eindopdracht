@@ -81,8 +81,8 @@ def plot_days(df, title):
 rentah_days = df_rentah['Weekday'].value_counts().sort_index()
 dinho_days = df_dinho['Weekday'].value_counts().sort_index()
 
-# plot_days(rentah_days, "Days watching Rentah")
-# plot_days(dinho_days, "Days watching Dinho")
+plot_days(rentah_days, "Days watching Rentah")
+plot_days(dinho_days, "Days watching Dinho")
 
 
 #### --------> Plot by Hour <-------- ####
@@ -97,8 +97,8 @@ def plot_hours(df, title):
 rentah_hours = df_rentah['Hour'].value_counts().sort_index()
 dinho_hours = df_dinho['Hour'].value_counts().sort_index()
 
-# plot_hours(rentah_hours, "Hours watching Rentah")
-# plot_hours(dinho_hours, "Hours watching Dinho")
+plot_hours(rentah_hours, "Hours watching Rentah")
+plot_hours(dinho_hours, "Hours watching Dinho")
 
 
 
@@ -114,8 +114,8 @@ def plot_months(df, title):
 rentah_months = df_rentah['Month'].value_counts().sort_index()
 dinho_months = df_dinho['Month'].value_counts().sort_index()
 
-# plot_hours(rentah_months, "Rentah wachting Netflix by Month")
-# plot_hours(dinho_months, "Dinho wachting Netflix by Month")
+plot_months(rentah_months, "Netflix by Month Rentah")
+plot_months(dinho_months, "Netflix by Month Dinho")
 
 
 #### ---->> Get top X of Watched Titles per Year <<---- ####
@@ -130,8 +130,13 @@ def top_duration_year(df, year, rank):
 
 top_3_2024 = top_duration_year(df_rentah, 2024, 3)
 top_3_2023 = top_duration_year(df_rentah, 2023, 3)
-top_3_2022 = top_duration_year(cleaned_df, 2022, 3)
-top_3_2021 = top_duration_year(cleaned_df, 2021, 3)
+top_3_2022 = top_duration_year(df_rentah, 2022, 3)
+top_3_2021 = top_duration_year(df_rentah, 2021, 3)
+
+top_3_2024_dinho = top_duration_year(df_dinho, 2024, 3)
+top_3_2023_dinho = top_duration_year(df_dinho, 2023, 3)
+top_3_2022_dinho = top_duration_year(df_dinho, 2022, 3)
+top_3_2021_dinho = top_duration_year(df_dinho, 2021, 3)
 
 ## Plot top titles function ##
 def plot_top_titles(df, title):
@@ -141,10 +146,15 @@ def plot_top_titles(df, title):
     plt.title(title)
     plt.show()
 
-plot_top_titles(top_3_2024, 'Top 3 2024')
-plot_top_titles(top_3_2023, 'Top 3 2023')
-# plot_top_titles(top_3_2022, 'Top 3 2022')
-# plot_top_titles(top_3_2021, 'Top 3 2021')
+plot_top_titles(top_3_2024, 'Top 3 2024 Rentah')
+plot_top_titles(top_3_2023, 'Top 3 2023 Rentah')
+plot_top_titles(top_3_2022, 'Top 3 2022 Rentah')
+plot_top_titles(top_3_2021, 'Top 3 2021 Rentah')
+
+plot_top_titles(top_3_2024_dinho, 'Top 3 2024 Dinho')
+plot_top_titles(top_3_2023_dinho, 'Top 3 2023 Dinho')
+plot_top_titles(top_3_2022_dinho, 'Top 3 2022 Dinho')
+plot_top_titles(top_3_2021_dinho, 'Top 3 2021 Dinho')
 
 
 unique_devices_rentah = df_rentah['Device Type'].unique()
