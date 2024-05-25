@@ -6,4 +6,5 @@ Met dit project analyseer ik mijn persoonlijke Netflix-gegevens om inzichten te 
 ## Technologieën en Tools
 - Python
 - pandas
+- numpy
 - matplotlib
