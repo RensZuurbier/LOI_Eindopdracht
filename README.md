@@ -8,3 +8,12 @@ Met dit project analyseer ik mijn persoonlijke Netflix-gegevens om inzichten te 
 - pandas
 - numpy
 - matplotlib
+
+## Resultaten
+Enkele verkregen inzichten zijn:
+- Kijkgedrag per maand
+- Kijkgedrag per dag van de week
+- Kijkgedrag per uur
+- Top 3 per verscheidene jaren van Rentah
+
+Zie plots: https://github.com/RensZuurbier/Netflix/tree/master/Netflix/plots
