@@ -45,7 +45,7 @@ cleaned_df['Title'] = cleaned_df['Title'].str.split(':').str[0]
 
 
 
-##### Get Data from specific Profile Name #####
+##### Get Data of specific Profile Name #####
 def df_profile(df, profile_name):
     return df[df['Profile Name'] == profile_name]
 ################################################################
